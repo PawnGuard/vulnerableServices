@@ -73,9 +73,9 @@
 	<body>
 		<div class="login-container">
 			<h1>Login</h1>
-			<form>
+			<form action="/login" method="POST">
 				<div class="form-group">
-					<label for="username">Username</label>
+					<label for="username">Usuario</label>
 					<input
 						type="text"
 						id="username"
@@ -85,7 +85,7 @@
 					/>
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label>
+					<label for="password">Contraseña</label>
 					<input
 						type="password"
 						id="password"
@@ -97,7 +97,8 @@
 				<button type="submit" class="login-btn">Sign In</button>
 			</form>
 			<div class="login-footer">
-				Don't have an account? <a href="#">Register</a>
+				No tienes una cuenta?
+				<a onclick="alert('No disponible actualmente.')">Registrarte</a>
 			</div>
 		</div>
 	</body>

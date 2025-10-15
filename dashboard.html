@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dashboard</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 40px;
+				background: #f5f5f5;
+			}
+			.header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.user-info {
+				font-weight: bold;
+			}
+			.accounts {
+				margin-top: 30px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				background: #fff;
+			}
+			th,
+			td {
+				padding: 12px;
+				border-bottom: 1px solid #ddd;
+				text-align: left;
+			}
+			.locked {
+				color: #c00;
+				font-weight: bold;
+			}
+			.disabled {
+				color: #888;
+			}
+			.notice {
+				margin-top: 20px;
+				color: #888;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Dashboard</h1>
+			<div class="user-info">Logged in as: john</div>
+		</div>
+		<div class="accounts">
+			<h2>Accounts</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Username</th>
+						<th>Status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Administrator</td>
+						<td class="locked">Locked</td>
+						<td class="disabled">Unavailable</td>
+					</tr>
+					<tr>
+						<td>john</td>
+						<td>Active</td>
+						<td class="disabled">Unavailable</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="notice">
+			<em>Dashboard features are currently unavailable.</em>
+		</div>
+	</body>
+</html>
