@@ -40,4 +40,4 @@ app.get("/admin", (req, res) => {
 	return res.status(403).send("Forbidden");
 });
 
-app.listen(8080, "0.0.0.0", () => console.log("listening on 8080"));
+app.listen(80, "0.0.0.0", () => console.log("listening on 8080"));
