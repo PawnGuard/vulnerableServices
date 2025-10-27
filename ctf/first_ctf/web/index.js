@@ -32,7 +32,7 @@ app.post("/validation", (req, res) => {
   const { flag } = req.body || {};
 
   if ( flag === "PWG{MY_FIRST_TRY}" ){
-    return res.json({ result: 1, username: "bruteforce", silence: "firee" });
+    return res.json({ result: 1, username: "pawnguard", silence: "firee" });
   }else if ( flag === "PWG{IM_HACKING}" ){
     return res.json({ result: 2 });
   }else {

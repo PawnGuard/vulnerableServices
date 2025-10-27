@@ -125,6 +125,24 @@
       color:var(--muted);
     }
 
+    /* Sección SSH */
+    .ssh-section[hidden]{ display:none; }
+    .ssh-section{
+      margin-top:16px;
+      padding:16px;
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:10px;
+      text-align:left;
+    }
+    .ssh-section h2{ margin:0 0 8px 0; font-size:18px; }
+    .ssh-section code{
+      background: rgba(16,185,129,0.12);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #a7f3d0;
+    }
+
     #confetti-canvas{
       pointer-events:none;
       position:fixed;
@@ -166,6 +184,13 @@
     </div>
   </div>
 
+  <!-- Sección a mostrar tras validación correcta -->
+  <div id="ssh-access" class="ssh-section" hidden>
+    <h2>Acceso SSH</h2>
+    <p>Usuario SSH: <code id="ssh-user">pawnguard</code></p>
+    <p>Conéctate usando tu host del reto. Ejemplo: <code>ssh pawnguard@direccion-ip</code></p>
+  </div>
+
   <canvas id="confetti-canvas" aria-hidden="true"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -177,6 +202,10 @@
       const clearBtn = document.getElementById('clearBtn');
       const status = document.getElementById('status');
       const confettiCanvas = document.getElementById('confetti-canvas');
+
+      // Nuevos elementos de la sección SSH
+      const sshSection = document.getElementById('ssh-access');
+      const sshUserEl = document.getElementById('ssh-user');
 
       confettiCanvas.width = window.innerWidth;
       confettiCanvas.height = window.innerHeight;
@@ -231,8 +260,21 @@
           if (!ok) status.textContent = 'Error del servidor.';
           else {
             const isOne = (data?.result > 0);
-            if (isOne) { status.textContent = '¡Felicidades, la flag es correcta! 🎉'; lanzarConfeti(); }
-            else status.textContent = 'Flag invalida.';
+            if (isOne) {
+              status.textContent = '¡Felicidades, la flag es correcta! 🎉';
+              lanzarConfeti();
+
+              // Mostrar sección SSH y redirigir al ancla
+              sshUserEl.textContent = data?.username || 'ctfplayer';
+              sshSection.hidden = false;
+              // Pequeño delay para asegurar render antes del scroll
+              setTimeout(() => {
+                location.hash = '#ssh-access';
+                sshSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 50);
+            } else {
+              status.textContent = 'Flag invalida.';
+            }
           }
         } catch {
           status.textContent = 'Error al comunicarse con el servidor.';
