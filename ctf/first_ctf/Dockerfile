@@ -8,11 +8,12 @@ nodejs \
 neovim \
 net-tools \
 npm \
-wget && useradd pawnguard -m -s /bin/bash && echo "pawnguard:pawnguard" | chpasswd && rm -f /etc/motd
+wget && useradd pawnguard -m -s /bin/bash && useradd hacker -m -s /bin/bash && echo "hacker:00000000" | chpasswd && echo "pawnguard:pawnguard" | chpasswd && rm -f /etc/motd
 
 COPY ./docker/sshd_config /tmp/sshd_config
 COPY ./docker/motd /etc/motd
 COPY ./web /var/www/html
+COPY ./usernames/hacker/ /home/hacker
 
 EXPOSE 22 80
 

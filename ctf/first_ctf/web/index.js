@@ -10,7 +10,7 @@ app.use(
 );
 app.use(express.json());
 
-const creds = { Administrator: "twinkle", john: "1122112233", guest: "123456" };
+const creds = { Administrator: "twinkle", john: "1122112233", hernandez: "celeste" };
 
 app.get("/", (_, res) => res.sendFile(__dirname + "/index.html"));
 
@@ -19,11 +19,13 @@ app.post("/login", (req, res) => {
 	if (creds[username] === password) {
 		req.session.user = username;
 
-		if (username === "john" || username === "guest") {
+		if (username === "john") {
 			return res.redirect("/dashboard");
 		} else if (username === "Administrator") {
 			return res.redirect("/admin");
-		}
+		}else if(username === "hernandez"){
+      return res.redirect("/dashboard2");
+    }
 	}
 	return res.send("Invalid username or password");
 });
@@ -32,11 +34,11 @@ app.post("/validation", (req, res) => {
   const { flag } = req.body || {};
 
   if ( flag === "PWG{MY_FIRST_TRY}" ){
-    return res.json({ result: 1, username: "pawnguard", silence: "firee" });
+    return res.json({ result: 1, username: "pawnguard" });
   }else if ( flag === "PWG{IM_HACKING}" ){
-    return res.json({ result: 2 });
-  }else {
-    return res.json({ result: 0 });
+    return res.json({ result: 2, username: "hacker" });
+  }else if(flag === "PWG{I_AM_COOKING}"){
+    return res.json({ result: 3, username: "¡FELICIDADES, YA NO HAY USUARIO!" });
   }
 
 	return res.send("Invalid flag");
@@ -45,6 +47,13 @@ app.post("/validation", (req, res) => {
 app.get("/dashboard", (req, res) => {
 	if (req.session.user === "john") {
 		return res.sendFile(__dirname + "/dashboard.html");
+	}
+	return res.status(403).send("Forbidden");
+});
+
+app.get("/dashboard2", (req, res) => {
+	if (req.session.user === "hernandez") {
+		return res.sendFile(__dirname + "/dashboard2.html");
 	}
 	return res.status(403).send("Forbidden");
 });
