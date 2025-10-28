@@ -38,7 +38,7 @@ app.post("/validation", (req, res) => {
   }else if ( flag === "PWG{IM_HACKING}" ){
     return res.json({ result: 2, username: "hacker" });
   }else if(flag === "PWG{I_AM_COOKING}"){
-    return res.json({ result: 3, username: "¡FELICIDADES, YA NO HAY USUARIO!" });
+    return res.json({ result: 3, username: "¡FELICIDADES, YA NO HAY USUARIOS!" });
   }
 
 	return res.send("Invalid flag");
