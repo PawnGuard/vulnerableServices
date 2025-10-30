@@ -1,0 +1,11 @@
+¿Estás perdido?
+
+En Linux existen un tipo de permisos especiales, en específico uno llamado SUID. Estos te permiten crear programas (supongamos en Python) los cuales, si lo creas como un usuario dado (suponiendo root) y este tiene permisos de ejecución para otros, la ejecución del binario será como si el usuario que lo creo o es dueño del archivo, lo estuviese ejecutando.
+
+¿Entonces, qué puedes hacer ahora?
+
+Si observas, tienes un script, el cual, aprovechando este tipo de permisos, te permitirá ejecutar comandos como si el dueño del archivo lo estuviese ejecutando. Checa un poco de permisos por aquí y por allá, para finalmente ejecutar algún comando como el dueño del archivo.
+
+^o^  PAWNGUARD -- Suerte, tú puedes --- PAWNGUARD ^o^
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

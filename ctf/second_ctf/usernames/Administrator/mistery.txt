@@ -1,0 +1,377 @@
+#######################################################################
+# BEGIN MYSTERY PAYLOAD
+#######################################################################
+
+apple orange banana mango grape lemon lime cherry melon pear
+alpha beta gamma delta epsilon zeta eta theta iota kappa lambda
+omega sigma rho pi tau upsilon phi chi psi mu nu xi omicron
+
+VGhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+
+Row001: x e / E t c / m o t d z
+Row002: a b c d e f g h i j k l m n o p q
+Row003: 0 1 2 3 4 5 6 7 8 9 / e t c / m o t d
+Row004: p q r s t u v w x y z / x y z
+
+eyJhIjoidmFsdWUxIiwgImIiOiJ2YWx1ZTIiLCAiYyI6IkMvVFdLIn0=
+eyJwYXRoIjoiL2V0Yy9tb3RkIiwgIm90aGVyIjoiZGVjb3kgY2VibyJ9
+
+col1   col2   col3   col4
+aaaaa bbbbb ccccc ddddd
+x   y
+
+-- block: base64-lines-with-noise
+@@@!!!QWxhZGRpbjpPcGVuU2VzYW1l
+LLL= L2V0Yy9tb3Rk === MMM
+noiseVVVVVQm9iOmhlbGxvCg==zzzz
+
+-- block: sentence-with-every-7th-char
+S e l e c t   t h e   s e v e n t h   c h a r a c t e r   o f   t h i s   l i n e   t o   f i n d   c l u e s .
+1: S
+2: e
+3: l
+4: e
+5: c
+6: t
+7:   /
+8: t
+9: h
+10: e
+11:   e
+12: v
+13: e
+14: n
+15: t
+16: h
+17:   c
+18: h
+19: a
+20: r
+21: a
+22: c
+23: t
+24: e
+25: r
+26:   o
+27: f
+28:   t
+29: h
+30: i
+31: s
+32:   l
+33: i
+34: n
+35: e
+36:   t
+37: o
+38:   f
+39: i
+40: n
+41: d
+42:   c
+43: l
+44: u
+45: e
+46: s
+47: .
+
+decoy1.decoy decoy2.decoy decoy3.tmp example.log sample.bin
+random1.mp3 random2.mp4 noise.jpeg another.pdf bogus.sql
+
+/ e t c / m o t d 
+
+<root>
+  <item id="a">ZGF0YSAx</item>
+  <item id="b">L2V0Yy9tb3Rk</item>
+  <item id="c">ZGF0YSAz</item>
+</root>
+
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+S e l e c t   t h e   s e v e n t h   c h a r a c t e r   o f   t h i s   l i n e   t o   f i n d   c l u e s .
+1: S
+2: e
+3: l
+4: e
+5: c
+6: t
+7:   /
+8: t
+9: h
+10: e
+11:   e
+12: v
+13: e
+14: n
+15: t
+16: h
+17:   c
+18: h
+19: a
+20: r
+21: a
+22: c
+23: t
+24: e
+25: r
+26:   o
+27: f
+28:   t
+29: h
+30: i
+31: s
+32:   l
+33: i
+34: n
+35: e
+36:   t
+37: o
+38:   f
+39: i
+40: n
+41: d
+42:   c
+43: l
+44: u
+45: e
+46: s
+47: .
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+GhpcyBpcyBhIGRlY295IDogeyBub3QgLWRlY29kZSBkaXJlY3QgfQ==
+U29tZSBkZWNveSAxMjM0NTY3ODkwIGJhc2U2NA==
+QmFzZTY0IGNvbnRhaW5zIGFuZCBkZWNveWUgc2VnbWVudHM=
+Wm5jZ3JhbShyYW5kb20pCg==
+L2V0Yy9tb3RkICAgICAgICAgICAgICAgICAgICAgIC0gZWFzeQ==
+VGhpcyBvbmx5IGlzIGEgZmFrZSBsaW5lIGJhc2U2NA==
+
+S e l e c t   t h e   s e v e n t h   c h a r a c t e r   o f   t h i s   l i n e   t o   f i n d   c l u e s .
+1: S
+2: e
+3: l
+4: e
+5: c
+6: t
+7:   /
+8: t
+9: h
+10: e
+11:   e
+12: v
+13: e
+14: n
+15: t
+16: h
+17:   c
+18: h
+19: a
+20: r
+21: a
+22: c
+23: t
+24: e
+25: r
+26:   o
+27: f
+28:   t
+29: h
+30: i
+31: s
+32:   l
+33: i
+34: n
+35: e
+36:   t
+37: o
+38:   f
+39: i
+40: n
+41: d
+42:   c
+43: l
+44: u
+45: e
+46: s
+47: .
+
+2f6574632f6d6f7464
+48656c6c6f2c207468697320697320612068657820636f6465206578616d706c652e
+deadbeefcafebabe
+7b226e616d65223a20224a6f686e227d
+
+a9f3 1f2b c0a1 9e2c d3a1 ff00 88e7 11aa 77bb 33cc dd44
+Zq3r4t6y8u0pP0p9o8i7u6y5t4r3e2w1q
+
+
+S e l e c t   t h e   s e v e n t h   c h a r a c t e r   o f   t h i s   l i n e   t o   f i n d   c l u e s .
+1: S
+2: e
+3: l
+4: e
+5: c
+6: t
+7:   /
+8: t
+9: h
+10: e
+11:   e
+12: v
+13: e
+14: n
+15: t
+16: h
+17:   c
+18: h
+19: a
+20: r
+21: a
+22: c
+23: t
+24: e
+25: r
+26:   o
+27: f
+28:   t
+29: h
+30: i
+31: s
+32:   l
+33: i
+34: n
+35: e
+36:   t
+37: o
+38:   f
+39: i
+40: n
+41: d
+42:   c
+43: l
+44: u
+45: e
+46: s
+47: .
+
+-- block: base64-lines-with-noise
+@@@!!!QWxhZGRpbjpPcGVuU2VzYW1l
+LLL= L2V0Yy9tb3Rk === MMM
+noiseVVVVVQm9iOmhlbGxvCg==zzzz
+
+
+-- block: base64-lines-with-noise
+@@@!!!QWxhZGRpbjpPcddU2VzYW1l
+LLL= L2V0Yy9tb3Rk ==d=f MMM
+noiseVVVVVQm9iOmhlbGxvCgffuui==zzzz
+
+#######################################################################
+# END MYSTERY PAYLOAD
+#######################################################################
+

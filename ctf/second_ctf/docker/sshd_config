@@ -1,0 +1,19 @@
+# Permitir login con contraseña
+PasswordAuthentication yes
+# Permitir que root inicie sesión (un objetivo común)
+PermitRootLogin yes
+# Forzar a que no se usen llaves (para asegurar el ataque de contraseña)
+PubkeyAuthentication no
+
+# Ignorar límites de intentos de autenticación
+MaxAuthTries 1000
+LoginGraceTime 120
+
+# Configuración estándar
+Port 22
+ListenAddress 0.0.0.0
+Protocol 2
+UsePAM yes
+
+# Configuración Banner
+PrintMotd yes

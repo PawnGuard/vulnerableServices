@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PAWNGUARD</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#10b981;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071126 0%, #081226 100%);
+      color:#e6eef8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .container{
+      width:100%;
+      max-width:520px;
+      text-align:center;
+    }
+
+    .logo{
+      font-size:40px;
+      font-weight:800;
+      letter-spacing:2px;
+      margin-bottom:22px;
+      background: linear-gradient(90deg, #10b981, #06b6d4, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s linear infinite;
+      background-size: 200% auto;
+      text-shadow: 0 0 8px rgba(16,185,129,0.2);
+    }
+
+    @keyframes shine {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .card{
+      width:100%;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:28px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+
+    h1{margin:0 0 8px 0;font-size:20px}
+    p.lead{margin:0 0 20px 0;color:var(--muted);font-size:14px}
+
+    form {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    label{
+      display:block;
+      width:100%;
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .input-wrap{flex:1 1 260px; min-width:180px;}
+    input[type="text"]{
+      width:100%;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:var(--glass);
+      color:inherit;
+      font-size:15px;
+      outline: none;
+      transition: box-shadow .12s, border-color .12s;
+    }
+    input[type="text"]:focus{
+      box-shadow: 0 0 0 4px rgba(16,185,129,0.08);
+      border-color: rgba(16,185,129,0.6);
+    }
+
+    .controls{display:flex; gap:10px; align-items:center}
+    button{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      border: none;
+      cursor:pointer;
+      background: linear-gradient(90deg, var(--accent), #06a36e);
+      color:#042018;
+      font-weight:600;
+      font-size:14px;
+      box-shadow: 0 6px 18px rgba(16,185,129,0.12);
+    }
+    button[disabled]{opacity:0.6; cursor:default; transform:none}
+    .secondary{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      padding:9px 12px;
+      border-radius:8px;
+    }
+
+    .status{
+      width:100%;
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Sección SSH */
+    .ssh-section[hidden]{ display:none; }
+    .ssh-section{
+      margin-top:16px;
+      padding:16px;
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:10px;
+      text-align:left;
+    }
+    .ssh-section h2{ margin:0 0 8px 0; font-size:18px; }
+    .ssh-section code{
+      background: rgba(16,185,129,0.12);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #a7f3d0;
+    }
+
+    #confetti-canvas{
+      pointer-events:none;
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:9999;
+    }
+
+    @media (max-width:520px){
+      .card{padding:18px}
+      form{gap:8px}
+      .logo{font-size:32px;}
+    }
+  </style>
+</head>
+<!-- Take it before the page it's on production. Whe you take it, please remove this line and commit your changes. PWG{MY_FIRST_TRY} -->
+<body>
+  <div class="container">
+    <div class="logo">PAWNGUARD</div>
+
+    <div class="card" role="region" aria-label="Formulario de ejemplo con confeti">
+      <h1>Válida tu flag</h1>
+      <p class="lead">Introduce tu flag y presiona enviar. Si es correcta, verás el siguiente paso 🎉</p>
+
+      <form id="demo-form" autocomplete="off" novalidate>
+        <div class="input-wrap">
+          <label for="value">Valor</label>
+          <input id="value" name="value" type="text" placeholder="Escribe algo..." aria-label="Valor a enviar" required />
+        </div>
+
+        <div class="controls" aria-hidden="false">
+          <button id="submitBtn" type="submit" aria-live="polite">Enviar</button>
+          <button id="clearBtn" type="button" class="secondary">Limpiar</button>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite">Listo</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sección a mostrar tras validación correcta -->
+  <div id="ssh-access" class="ssh-section" hidden>
+    <h2>Acceso SSH</h2>
+    <p>Usuario SSH: <code id="ssh-user">pawnguard</code></p>
+    <p>Conéctate usando tu host del reto. Ejemplo: <code>ssh pawnguard@direccion-ip</code></p>
+  </div>
+
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    (function(){
+      const form = document.getElementById('demo-form');
+      const input = document.getElementById('value');
+      const submitBtn = document.getElementById('submitBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const status = document.getElementById('status');
+      const confettiCanvas = document.getElementById('confetti-canvas');
+
+      // Nuevos elementos de la sección SSH
+      const sshSection = document.getElementById('ssh-access');
+      const sshUserEl = document.getElementById('ssh-user');
+
+      confettiCanvas.width = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+      window.addEventListener('resize', () => {
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+      });
+
+      const myConfetti = confetti.create(confettiCanvas, { resize: true, useWorker: true });
+
+      function lanzarConfeti() {
+        myConfetti({ particleCount: 40, spread: 70, origin: { y: 0.2 } });
+        myConfetti({ particleCount: 30, spread: 120, origin: { y: 0.1 } });
+        const duration = 1200;
+        const end = Date.now() + duration;
+        (function frame() {
+          myConfetti({
+            particleCount: 5,
+            startVelocity: 25,
+            ticks: 60,
+            origin: { x: Math.random(), y: Math.random() * 0.6 }
+          });
+          if (Date.now() < end) requestAnimationFrame(frame);
+        })();
+      }
+
+      async function enviarValor(valor) {
+        const url = 'http://localhost:80/validation';
+        const payload = { flag: valor };
+        const resp = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        let data;
+        try { data = await resp.json(); }
+        catch { data = (await resp.text()).trim(); }
+        return { ok: resp.ok, data };
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const val = input.value.trim();
+        if (!val) return (status.textContent = 'Introduce un valor antes de enviar.');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+        status.textContent = 'Enviando al servidor...';
+
+        try {
+          const { ok, data } = await enviarValor(val);
+          if (!ok) status.textContent = 'Error del servidor.';
+          else {
+            const isOne = (data?.result > 0);
+            if (isOne) {
+              status.textContent = '¡Felicidades, la flag es correcta! 🎉';
+              lanzarConfeti();
+
+              // Mostrar sección SSH y redirigir al ancla
+              sshUserEl.textContent = data?.username || 'ctfplayer';
+              sshSection.hidden = false;
+              // Pequeño delay para asegurar render antes del scroll
+              setTimeout(() => {
+                location.hash = '#ssh-access';
+                sshSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 50);
+            } else {
+              status.textContent = 'Flag invalida.';
+            }
+          }
+        } catch {
+          status.textContent = 'Error al comunicarse con el servidor.';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar';
+        }
+      });
+
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        status.textContent = 'Listo';
+        input.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
+
