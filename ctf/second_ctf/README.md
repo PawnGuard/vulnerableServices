@@ -65,3 +65,6 @@ You need **docker** to run this lab.
 
     ```shell
     docke run -dit -p 2222:22 -p 4344:80 my_ctf
+
+4. Remember that the format flag looks like this:
+    PWG{MY_FLAG}
